@@ -41,3 +41,13 @@ let s1 = the10.then((data) => {
 	log(data[0]);
 	return data[0];
 });
+
+the10.then((data) => {
+	log(data[0].geometry.coordinates[0])
+	log(data[0].geometry.coordinates[1])
+	log(data[0].properties.mag)
+	log(data[0].properties.time)
+	log(data[0].properties.updated)
+	log(data[0].properties.felt)
+	log(data[0].properties.place)
+})
