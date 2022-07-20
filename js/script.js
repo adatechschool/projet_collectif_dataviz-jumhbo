@@ -12,8 +12,13 @@ async function getSeismeData() {
 		"https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson"
 	);
 	let rawData = await apiGetResponse.json();
-	// console.log(rawData)
-	return rawData;
+	// console.log(rawData);
+
+	setTimeout(getSeismeData, 5000);
+
+	let obj = rawData.features;
+	const latest10 = get10LastS(obj);
+	return latest10;
 }
 
 function get10LastS(obj) {
@@ -26,8 +31,13 @@ function get10LastS(obj) {
 	return last10;
 }
 
-getSeismeData().then((rawData) => {
-	let obj = rawData.features;
-	const latest10 = get10LastS(obj);
-	console.log("latest10", latest10);
+function log(a) {
+	console.log("LOOOG", a);
+}
+
+let the10 = getSeismeData();
+
+let s1 = the10.then((data) => {
+	log(data[0]);
+	return data[0];
 });
