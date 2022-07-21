@@ -37,32 +37,70 @@ function log(a) {
 
 let the10 = getSeismeData();
 
-let s1 = the10.then((data) => {
-	log(data[0]);
-	return data[0];
+the10.then((data) => {
+	log(data);
 });
 
 the10.then((data) => {
-	log(data[0].geometry.coordinates[0])
-	log(data[0].geometry.coordinates[1])
-	let coordinate0Part1 = data[0].geometry.coordinates[1]
-	let coordinate0Part2  = data[0].geometry.coordinates[0]
-	log(data[0].properties.mag)
-	log(data[0].properties.time)
-	log(data[0].properties.updated)
-	log(data[0].properties.felt)
-	log(data[0].properties.place)
+	log(data[0].geometry.coordinates[0]);
+	log(data[0].geometry.coordinates[1]);
+	let coordinate0Part1 = data[0].geometry.coordinates[1];
+	let coordinate0Part2 = data[0].geometry.coordinates[0];
+	log(data[0].properties.mag);
+	log(data[0].properties.time);
+	log(data[0].properties.updated);
+	log(data[0].properties.felt);
+	log(data[0].properties.place);
 
-	let firstEq = L.marker([coordinate0Part1, coordinate0Part2]).addTo(map)
-	firstEq.bindPopup(data[0].properties.place).openPopup()
+	let firstEq = L.marker([coordinate0Part1, coordinate0Part2]).addTo(map);
+	firstEq.bindPopup(data[0].properties.place).openPopup();
 
 	//deuxième séisme
-	let secondEq = L.marker([data[1].geometry.coordinates[1], data[1].geometry.coordinates[0]]).addTo(map)
-	secondEq.bindPopup(data[1].properties.place).openPopup()
+	let secondEq = L.marker([
+		data[1].geometry.coordinates[1],
+		data[1].geometry.coordinates[0],
+	]).addTo(map);
+	secondEq.bindPopup(data[1].properties.place).openPopup();
 
 	//troisième séisme
-	let coordinate2Part1 = data[2].geometry.coordinates[1]
-	let coordinate2Part2  = data[2].geometry.coordinates[0]
-	let thirdEq = L.marker([coordinate2Part1, coordinate2Part2]).addTo(map)
-	thirdEq.bindPopup(data[2].properties.place).openPopup()
-})
+	let coordinate2Part1 = data[2].geometry.coordinates[1];
+	let coordinate2Part2 = data[2].geometry.coordinates[0];
+	let thirdEq = L.marker([coordinate2Part1, coordinate2Part2]).addTo(map);
+	thirdEq.bindPopup(data[2].properties.place).openPopup();
+});
+// the10.then((data) => {
+// 	log(data[0].geometry.coordinates[0]);
+// 	log(data[0].geometry.coordinates[1]);
+// 	log(data[0].properties.mag);
+// 	log(data[0].properties.time);
+// 	log(data[0].properties.updated);
+// 	log(data[0].properties.felt);
+// 	log(data[0].properties.place);
+// });
+
+const usrLocation = async () => {
+	return new Promise((resolve, reject) => {
+		navigator.geolocation.getCurrentPosition(
+			(position) => {
+				resolve({
+					lat: position.coords.latitude,
+					long: position.coords.longitude,
+				});
+			},
+			() => {
+				//status.textContent = "We can't get you're location";
+				resolve(null);
+			}
+		);
+	});
+};
+
+const btnClick = async (pos) => {
+	const position = await usrLocation();
+	console.log(position);
+	return pos;
+};
+
+document.querySelector(".usr-Location").addEventListener("click", btnClick);
+
+// L.marker([coordinate2Part1, coordinate2Part2]).addTo(map)
