@@ -1,68 +1,90 @@
 #title {
-    text-decoration-color: hsla(0, 100%, 50%, 0.1);
-    text-align: center;
+	text-decoration-color: hsla(0, 100%, 50%, 0.1);
+	text-align: center;
 }
 
-body  {
-    margin: 0;
-    background-image: url("#");
-    background-color: #FDF9F0;
+body {
+	margin: 0;
+	background-image: url("#");
+	background-color: #FDF9F0;
 }
 
 h1, h5 {
-    text-align: center;
+	text-align: center;
 }
 
-video {
-    flex-direction: row , center;
+h5 {
+	color: #AAD5A1;
 }
+
+#video {
+	height: 2768px;
+	margin: 0 auto;
+	width: "400";
+	height: "400";
+	max-width: 1000px;
+	max-height: 90vh;
+	box-sizing: border-box;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+
 
 article {
 	border: 3px solid #FDF9F0;
 	height: 500px;
-    position: relative;
+	position: relative;
 	border: 3px solid #FDF9F0;
 	box-sizing: border-box;
 }
+
 article span {
 	background-color: #FDF9F0;
 }
+
 aside {
 	border: 3px solid #FDF9F0;
 	height: 500px;
-    position: relative;
-	border: 3px solid #cccccc;
+	position: relative;
+	border: 3px solid #FDF9F0;
 	box-sizing: border-box;
 }
 
 
-  footer {
-    background-color: #FFFFFF;
-    position: relative;
+footer {
+	background-color: #FFFFFF;
+	position: relative;
 	border: 3px solid #cccccc;
 	box-sizing: border-box;
 	border: 3px solid #FDF9F0;
 	height: 50px;
-    border: 2px solid #FFFFFF;
-    border-radius: 12px;
-    padding: 5px;
-    text-align: center;
+	border: 2px solid #FFFFFF;
+	border-radius: 12px;
+	padding: 5px;
+	text-align: center;
+	position: relative;
 }
 
 section {
 	position: relative;
-	border: 3px solid #cccccc;
+	border: 3px solid #FDF9F0;
 	box-sizing: border-box;
 }
+
 span {
-	padding : 1px;
-	background-color: #cccccc;
+	padding: 1px;
+	background-color: #FDF9F0;
 }
 
 header span {
 	background-color: #FDF9F0;
-    
+
 }
+
 /*nav {
 	border: 3px solid #8BC34A;
 	height: 500px;
@@ -74,19 +96,20 @@ section {
 	border: 3px solid #FDF9F0;
 	padding: 25px;
 }
+
 section span {
 	background-color: #FDF9F0;
 }
 
 
-#map { 
-    height: 2768px;
-    margin: 0 auto;
-    align-items: center;
-	width:"200" ;
-	height:"200" ;
-	max-width: 1000px; 
-	max-height: 90vh; 
+#map {
+	height: 2768px;
+	margin: 2 auto;
+	align-items: center;
+	width: "300";
+	height: "200";
+	max-width: 1500px;
+	max-height: 90vh;
 	box-sizing: border-box;
 }
 

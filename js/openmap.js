@@ -1,9 +1,10 @@
 var map = L.map('map').setView([48.874501, 2.3587], 13);
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 8,
+    maxZoom: 3,
     attribution: '© OpenStreetMap'
 }).addTo(map);
+
 
 var marqueur = L.marqueur([51.5, -0.09]).addTo(map);
 
@@ -49,3 +50,5 @@ map.on('click', onMapClick);
 
 
 document.querySelector("#modal-dialog > div > div.hoUMge > div > div.yFnP6d > div > div > div > div.eNBuZ > div.MNWp1c > div > iframe")
+
+
