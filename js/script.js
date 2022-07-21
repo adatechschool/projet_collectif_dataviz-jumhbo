@@ -52,31 +52,16 @@ the10.then((data) => {
 	log(data[0].properties.felt);
 	log(data[0].properties.place);
 
-	let firstEq = L.marker([coordinate0Part1, coordinate0Part2]).addTo(map);
-	firstEq.bindPopup(data[0].properties.place).openPopup();
+	
+	let seismesCoordinates = []
 
-	//deuxième séisme
-	let secondEq = L.marker([
-		data[1].geometry.coordinates[1],
-		data[1].geometry.coordinates[0],
-	]).addTo(map);
-	secondEq.bindPopup(data[1].properties.place).openPopup();
-
-	//troisième séisme
-	let coordinate2Part1 = data[2].geometry.coordinates[1];
-	let coordinate2Part2 = data[2].geometry.coordinates[0];
-	let thirdEq = L.marker([coordinate2Part1, coordinate2Part2]).addTo(map);
-	thirdEq.bindPopup(data[2].properties.place).openPopup();
-});
-// the10.then((data) => {
-// 	log(data[0].geometry.coordinates[0]);
-// 	log(data[0].geometry.coordinates[1]);
-// 	log(data[0].properties.mag);
-// 	log(data[0].properties.time);
-// 	log(data[0].properties.updated);
-// 	log(data[0].properties.felt);
-// 	log(data[0].properties.place);
-// });
+	for (i=0; i<10; i++) {
+		log(data[i].geometry.coordinates[1])
+		seismesCoordinates[i] = L.marker([data[i].geometry.coordinates[1], data[i].geometry.coordinates[0]]).addTo(map)
+		seismesCoordinates[i].bindPopup(data[i].properties.place).openPopup()
+	}
+	
+})
 
 const usrLocation = async () => {
 	return new Promise((resolve, reject) => {
@@ -102,5 +87,3 @@ const btnClick = async (pos) => {
 };
 
 document.querySelector(".usr-Location").addEventListener("click", btnClick);
-
-// L.marker([coordinate2Part1, coordinate2Part2]).addTo(map)

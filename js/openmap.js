@@ -1,6 +1,5 @@
 var map = L.map("map").setView([48.874501, 2.3587], 13);
 
-<<<<<<< HEAD
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 3,
     attribution: '© OpenStreetMap'
@@ -8,14 +7,6 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 
 var marqueur = L.marqueur([51.5, -0.09]).addTo(map);
-=======
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-	maxZoom: 8,
-	attribution: "© OpenStreetMap",
-}).addTo(map);
-
-var marqueur = L.marker([51.5, -0.09]).addTo(map);
->>>>>>> 5391986546c5f1fd28d43f9a05cb136c16e3d432
 
 var cercle = L.cercle([51.508, -0.11], {
 	color: "red",
@@ -56,12 +47,6 @@ function onMapClick(e) {
 
 map.on("click", onMapClick);
 
-<<<<<<< HEAD
 document.querySelector("#modal-dialog > div > div.hoUMge > div > div.yFnP6d > div > div > div > div.eNBuZ > div.MNWp1c > div > iframe")
 
 
-=======
-document.querySelector(
-	"#modal-dialog > div > div.hoUMge > div > div.yFnP6d > div > div > div > div.eNBuZ > div.MNWp1c > div > iframe"
-);
->>>>>>> 5391986546c5f1fd28d43f9a05cb136c16e3d432
