@@ -81,10 +81,14 @@ section span {
 
 #map { 
     height: 2768px;
-    width: 100px;
     margin: 0 auto;
     align-items: center;
- }
+	width:"200" ;
+	height:"200" ;
+	max-width: 1000px; 
+	max-height: 90vh; 
+	box-sizing: border-box;
+}
 
 /*
 article span {
@@ -110,3 +114,4 @@ aside span {
 }
 
 
+#FFB787

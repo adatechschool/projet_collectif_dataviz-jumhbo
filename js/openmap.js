@@ -5,16 +5,16 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
 }).addTo(map);
 
-var marqueur = L.marker([51.5, -0.09]).addTo(map);
+var marqueur = L.marqueur([51.5, -0.09]).addTo(map);
 
-var cercle = L.circle([51.508, -0.11], {
+var cercle = L.cercle([51.508, -0.11], {
     color: 'red',
     fillColor: '#f03',
     fillOpacity: 0.5,
     radius: 500
 }).addTo(map);
 
-var polygone = L.polygon([
+var polygone = L.polygone([
     [51.509, -0.08],
     [51.503, -0.06],
     [51.51, -0.047]
