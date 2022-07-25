@@ -61,6 +61,12 @@ the10.then((data) => {
 		seismesCoordinates[i] = L.marker([data[i].geometry.coordinates[1], data[i].geometry.coordinates[0]]).addTo(map)
 		seismesCoordinates[i].bindPopup(data[i].properties.place + "<br />Magnitude : " + data[i].properties.mag + "<br />Felt by " + data[i].properties.felt + " people<br />" + seismesDates[i]).openPopup()
 	}
+
+	 document.getElementById("séisme1").innerHTML = data[0].properties.place + " | " + seismesDates[0] + " | Magnitude : " + data[0].properties.mag
+	 document.getElementById("séisme2").innerHTML = data[1].properties.place + " | " + seismesDates[1] + " | Magnitude : " + data[1].properties.mag
+	 document.getElementById("séisme3").innerHTML = data[2].properties.place + " | " + seismesDates[2] + " | Magnitude : " + data[2].properties.mag
+	 document.getElementById("séisme4").innerHTML = data[3].properties.place + " | " + seismesDates[3] + " | Magnitude : " + data[3].properties.mag
+	 document.getElementById("séisme5").innerHTML = data[4].properties.place + " | " + seismesDates[4] + " | Magnitude : " + data[4].properties.mag
 	
 })
 

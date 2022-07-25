@@ -84,22 +84,15 @@
             
             <aside>
                 <span class="corner10">
-                    <h5><u>Liste des 10 derniers évènements sismiques survenus dans le monde.</u></h5>
+                    <h5><u>Liste des 5 derniers évènements sismiques survenus dans le monde.</u></h5>
                 </span>
                 <ul id="evenements">
-                    <span id="input"></span>
-                    <script>
-                        the10.then((data)=>{
-                            document.getElementById('input').innerHTML = data[0].properties.place ;
-                        })
-                        
-                    </script>
 
-
-                    <p>1</p>
-                    <p>2</p>
-                    <p>3</p>
-                    <p>4</p>
+                    <p id="séisme1"></p>
+                    <p id="séisme2"></p>
+                    <p id="séisme3"></p>
+                    <p id="séisme4"></p>
+                    <p id="séisme5"></p>
                   </ul>
             </aside>
             <footer class="bg-success">
