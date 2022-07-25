@@ -14,14 +14,18 @@ h1, h5 {
 }
 
 h5 {
-	color: #AAD5A1;
+	color: #487F63;
+}
+
+.p {
+	color: #487F63
 }
 
 #video {
 	height: 2768px;
 	margin: 0 auto;
 	width: "400";
-	height: "400";
+	height: "200";
 	max-width: 1000px;
 	max-height: 90vh;
 	box-sizing: border-box;
@@ -67,6 +71,8 @@ footer {
 	padding: 5px;
 	text-align: center;
 	position: relative;
+	background-color: #aad5a1;
+	justify-content: space-evenly;
 }
 
 section {
@@ -111,6 +117,11 @@ section span {
 	max-width: 1500px;
 	max-height: 90vh;
 	box-sizing: border-box;
+}
+
+#evenements{
+	text-align: center;
+	list-style-type: none;
 }
 
 /*

@@ -20,7 +20,7 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-success ">
             <div class="container-fluid">
                 <img src="images/logo2.jpeg" alt="" width="80" height="50" class="d-inline-block align-text-top">
                 <a class="navbar-brand">-'\_JuMBo_/\_</a>
@@ -52,7 +52,6 @@
                     projets de
                     recherche ou de surveillance, de stations des réseaux des pays frontaliers (Allemagne, Royaume-Uni,
                     Belgique, Espagne, Italie, Luxembourg, Suisse) et de stations des réseaux mondiaux.
-
                     <hr>
                 </h5>
             </div>
@@ -60,13 +59,13 @@
             <div class="#">
 
             </div>
-
             <span id="video">
-                <iframe width="800" height="415" src="https://www.youtube.com/embed/eMotO_iyo-I"
+                <iframe width="800" height="400" src="https://www.youtube.com/embed/eMotO_iyo-I"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </span>
+            <br>
             <span>
                 <p>La surface du globe terrestre est composée d'une douzaine de grands morceaux. Ce sont les plaques
                     tectoniques. Elles s'encastrent les unes dans les autres comme les pièces d'un puzzle et forment
@@ -80,21 +79,30 @@
                 <hr>
             </span>
 
-
+            <button type="usr-Location ">Would you allow us to get you're location?</button>
             <div id="map"></div>
-
-
-
+            
             <aside>
-                <span class="corner1">
-                    <h5>Les listes des évènements sismiques survenus dans le monde.</h5>
+                <span class="corner10">
+                    <h5><u>Liste des 10 derniers évènements sismiques survenus dans le monde.</u></h5>
                 </span>
-                <ul>
-                    <li></li>
-                </ul>
+                <ul id="evenements">
+                    <span id="input"></span>
+                    <script>
+                        the10.then((data)=>{
+                            document.getElementById('input').innerHTML = data[0].properties.place ;
+                        })
+                        
+                    </script>
+
+
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                  </ul>
             </aside>
-            <footer>
-                <span class="corner1">&lt;&#169Copyright&gt; JuMBo</span>
+            <footer class="bg-success">
+                <span class="corner1">&lt;&#169Copyright&gt; JuMBo Tous droits reversés.</span>
 
             </footer>
         </article>
@@ -107,3 +115,4 @@
 
 
 </html>
+
