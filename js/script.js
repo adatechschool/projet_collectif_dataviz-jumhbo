@@ -54,11 +54,12 @@ the10.then((data) => {
 
 	
 	let seismesCoordinates = []
+	let seismesDates = []
 
 	for (i=0; i<10; i++) {
-		// log(data[i].geometry.coordinates[1])
+		seismesDates[i] = new Date(data[i].properties.time)
 		seismesCoordinates[i] = L.marker([data[i].geometry.coordinates[1], data[i].geometry.coordinates[0]]).addTo(map)
-		seismesCoordinates[i].bindPopup(data[i].properties.place).openPopup()
+		seismesCoordinates[i].bindPopup(data[i].properties.place + "<br />Magnitude : " + data[i].properties.mag + "<br />Felt by " + data[i].properties.felt + " people<br />" + seismesDates[i]).openPopup()
 	}
 	
 })
