@@ -44,8 +44,8 @@ the10.then((data) => {
 the10.then((data) => {
 	log(data[0].geometry.coordinates[0]);
 	log(data[0].geometry.coordinates[1]);
-	let coordinate0Part1 = data[0].geometry.coordinates[1];
-	let coordinate0Part2 = data[0].geometry.coordinates[0];
+	// let coordinate0Part1 = data[0].geometry.coordinates[1];
+	// let coordinate0Part2 = data[0].geometry.coordinates[0];
 	log(data[0].properties.mag);
 	log(data[0].properties.time);
 	log(data[0].properties.updated);
@@ -56,7 +56,7 @@ the10.then((data) => {
 	let seismesCoordinates = []
 
 	for (i=0; i<10; i++) {
-		log(data[i].geometry.coordinates[1])
+		// log(data[i].geometry.coordinates[1])
 		seismesCoordinates[i] = L.marker([data[i].geometry.coordinates[1], data[i].geometry.coordinates[0]]).addTo(map)
 		seismesCoordinates[i].bindPopup(data[i].properties.place).openPopup()
 	}
