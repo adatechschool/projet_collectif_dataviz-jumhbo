@@ -45,23 +45,56 @@
         </nav>
     </header>
 
+    <div>
+        <h1>Bienvenue sur le site national d’information sur la sismicité fondé par Ada.</h1>
+        <h5>Il informe en temps réel sur les évènements sismiques localisés ou à proximité, à partir des
+            enregistrements
+            des stations de surveillance du Réseau sismologique et géodésique français Résif, de stations de
+            projets de
+            recherche ou de surveillance, de stations des réseaux des pays frontaliers (Allemagne, Royaume-Uni,
+            Belgique, Espagne, Italie, Luxembourg, Suisse) et de stations des réseaux mondiaux.
+            <hr>
+        </h5>
+    </div>
+
     <section>
         <article>
-            <div>
-                <h1>Bienvenue sur le site national d’information sur la sismicité fondé par Ada.</h1>
-                <h5>Il informe en temps réel sur les évènements sismiques localisés ou à proximité, à partir des
-                    enregistrements
-                    des stations de surveillance du Réseau sismologique et géodésique français Résif, de stations de
-                    projets de
-                    recherche ou de surveillance, de stations des réseaux des pays frontaliers (Allemagne, Royaume-Uni,
-                    Belgique, Espagne, Italie, Luxembourg, Suisse) et de stations des réseaux mondiaux.
-                    <hr>
-                </h5>
+            <div class="line">
+                <div class="bloc1">
+                    <span id="">
+                        <iframe width="700" height="400" src="https://www.youtube.com/embed/eMotO_iyo-I"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </span>
+                </div>
+        
+                <div class="bloc2">
+                    <span>
+                        <p>La surface du globe terrestre est composée d'une douzaine de grands morceaux. Ce sont les plaques
+                            tectoniques. Elles s'encastrent les unes dans les autres comme les pièces d'un puzzle et forment
+                            l'enveloppe superficielle de la Terre. Ces plaques se déplacent de quelques centimètres par an.
+                            Le mouvement des plaques les unes par rapport aux autres, créé localement des frottements qui
+                            les obligent à se déformer. Elles accumulent donc de l'énergie jusqu'à la rupture brutale. C'est
+                            le séisme.
+                            Découvrez en animation-vidéo l’origine des séismes, l’explication de la tectonique des plaques,
+                            et la définition d’un tsunami.<br>
+                            Les séismes détectés et répertoriés sur ces cartes sont généralement d'origine naturelle, c'est à
+                            dire liés aux soubresauts géologiques, au volcanisme et à la tectonique des plaques.
+        
+                            Cependant, certains tremblements de terre sont liés aux activités humaines : tir de carrière,
+                            prospection et exploitation pétrolière / gazière et essais d'armes nucléaires comme celui d'une
+                            bombe H de 80 à 120 kt par la Corée du Nord le 3 septembre 2017 qui a entraîné un séisme de
+                            magnitude 6,3 aux abords de l'explosion atomique.
+        
+                            90 % des séismes se déclenchent le long du cercle de feu du Pacifique.
+                            /_\Source: Youtube; L'Esprit Sorcier./_\</p>
+        
+                    </span>
+                </div>
             </div>
 
-            <div class="#">
-
-            </div>
+            <!-- </div>
             <span id="video">
                 <iframe width="800" height="400" src="https://www.youtube.com/embed/eMotO_iyo-I"
                     title="YouTube video player" frameborder="0"
@@ -80,12 +113,17 @@
                     et la définition d’un tsunami.
                     /_\Source: Youtube; L'Esprit Sorcier./_\</p>
                 <hr>
-            </span>
+            </span> -->
 
             <button type="usr-Location ">Would you allow us to get you're location?</button>
-            <button onclick="changeColor('blue');">blue</button>
             <div id="map"></div>
 
+            <div class="view_port">
+                <div class="polling_message">
+                    Actualisation...
+                </div>
+                <div class="cylon_eye"></div>
+            </div>
             <aside>
                 <span class="corner10">
                     <h5><u>Liste des 5 derniers évènements sismiques survenus dans le monde.</u></h5>
@@ -100,7 +138,8 @@
                 </ul>
             </aside>
             <footer class="bg-success">
-                <span class="corner10">&lt;&#169Copyright&gt; JuMBo Tous droits reversés.</span>
+                <span class="corner1">&lt;&#169Copyright&gt; JuMBo Tous droits reversés.</span>
+
 
             </footer>
         </article>
