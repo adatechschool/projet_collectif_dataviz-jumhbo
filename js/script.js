@@ -42,32 +42,28 @@ the10.then((data) => {
 });
 
 the10.then((data) => {
-	log(data[0].geometry.coordinates[0]);
-	log(data[0].geometry.coordinates[1]);
-	// let coordinate0Part1 = data[0].geometry.coordinates[1];
-	// let coordinate0Part2 = data[0].geometry.coordinates[0];
-	log(data[0].properties.mag);
-	log(data[0].properties.time);
-	log(data[0].properties.updated);
-	log(data[0].properties.felt);
-	log(data[0].properties.place);
+	// log(data[0].geometry.coordinates[0]);
+	// log(data[0].geometry.coordinates[1]);
+	// log(data[0].properties.mag);
+	// log(data[0].properties.time);
+	// log(data[0].properties.updated);
+	// log(data[0].properties.felt);
+	// log(data[0].properties.place);
 
-	
+
 	let seismesCoordinates = []
 	let seismesDates = []
 
-	for (i=0; i<10; i++) {
+	for (i = 0; i < 10; i++) {
 		seismesDates[i] = new Date(data[i].properties.time)
 		seismesCoordinates[i] = L.marker([data[i].geometry.coordinates[1], data[i].geometry.coordinates[0]]).addTo(map)
 		seismesCoordinates[i].bindPopup(data[i].properties.place + "<br />Magnitude : " + data[i].properties.mag + "<br />Felt by " + data[i].properties.felt + " people<br />" + seismesDates[i]).openPopup()
 	}
 
-	 document.getElementById("séisme1").innerHTML = data[0].properties.place + " | " + seismesDates[0] + " | Magnitude : " + data[0].properties.mag
-	 document.getElementById("séisme2").innerHTML = data[1].properties.place + " | " + seismesDates[1] + " | Magnitude : " + data[1].properties.mag
-	 document.getElementById("séisme3").innerHTML = data[2].properties.place + " | " + seismesDates[2] + " | Magnitude : " + data[2].properties.mag
-	 document.getElementById("séisme4").innerHTML = data[3].properties.place + " | " + seismesDates[3] + " | Magnitude : " + data[3].properties.mag
-	 document.getElementById("séisme5").innerHTML = data[4].properties.place + " | " + seismesDates[4] + " | Magnitude : " + data[4].properties.mag
-	
+	for (i = 0; i < 5; i++) {
+		document.getElementById("séisme" + i).innerHTML = data[i].properties.place + " | " + seismesDates[i] + " | Magnitude : " + data[i].properties.mag
+	}
+
 })
 
 const usrLocation = async () => {

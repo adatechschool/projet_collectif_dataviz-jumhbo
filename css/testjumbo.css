@@ -3,14 +3,33 @@
 	text-align: center;
 }
 
+.navbar-brand {
+	font-family: 'Oswald', sans-serif;
+}
+
+li.nav-item {
+	color: #FFFFFF;
+	font-family: 'Oswald', sans-serif;
+}
+
 body {
 	margin: 0;
 	background-image: url("#");
 	background-color: #FDF9F0;
 }
 
+.corner10 {
+	font-family: 'Oswald', sans-serif;
+}
+
+h1{
+	font-family: 'Oswald', sans-serif;
+	margin-bottom: 20px;
+}
+
 h1, h5 {
 	text-align: center;
+	/* margin-bottom: 50px; */
 }
 
 h5 {
@@ -60,7 +79,7 @@ aside {
 
 
 footer {
-	background-color: #FFFFFF; 
+	background-color: #487F63; 
 	position: relative;
 	border: 3px solid #cccccc;
 	box-sizing: border-box;
@@ -70,9 +89,29 @@ footer {
 	border-radius: 12px;
 	padding: 5px;
 	text-align: center;
-	position: relative;
+	position: fixed;
 	background-color: #aad5a1;
 	justify-content: space-around;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+}
+
+corner10 {
+	background-color: #487F63; 
+	border: 3px solid #cccccc;
+	box-sizing: border-box;
+	border: 3px solid #FDF9F0;
+	height: 50px;
+	border: 2px solid #FFFFFF;
+	border-radius: 12px;
+	padding: 5px;
+	text-align: center;
+	background-color: #aad5a1;
+	justify-content: space-around;
+	z-index : 1;
+
+	
 }
 
 section {
@@ -117,6 +156,7 @@ section span {
 	max-width: 1500px;
 	max-height: 90vh;
 	box-sizing: border-box;
+	z-index: 0;
 }
 
 #evenements{

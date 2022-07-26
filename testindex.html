@@ -15,6 +15,9 @@
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
         integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
         crossorigin=""></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet"> 
     <title>WorldWide Earthquake</title>
 </head>
 
@@ -34,7 +37,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link cative" aria-current="page" href="apropos.html">A propos</a>
+                            <a class="nav-link active" aria-current="page" href="apropos.html">A propos</a>
                         </li>
                     </ul>
                 </div>
@@ -81,24 +84,22 @@
 
             <button type="usr-Location ">Would you allow us to get you're location?</button>
             <div id="map"></div>
-            
+
             <aside>
                 <span class="corner10">
                     <h5><u>Liste des 5 derniers évènements sismiques survenus dans le monde.</u></h5>
                 </span>
                 <ul id="evenements">
 
+                    <p id="séisme0"></p>
                     <p id="séisme1"></p>
                     <p id="séisme2"></p>
                     <p id="séisme3"></p>
                     <p id="séisme4"></p>
-                    <p id="séisme5"></p>
-                  </ul>
+                </ul>
             </aside>
             <footer class="bg-success">
-                <span class="corner1">&lt;&#169Copyright&gt; JuMBo Tous droits reversés.</span>
-                <span>1</span>
-                <span>2</span>
+                <span class="corner10">&lt;&#169Copyright&gt; JuMBo Tous droits reversés.</span>
 
             </footer>
         </article>
@@ -111,4 +112,3 @@
 
 
 </html>
-
