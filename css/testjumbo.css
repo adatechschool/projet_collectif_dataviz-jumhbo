@@ -24,7 +24,7 @@ body {
 	font-family: 'Oswald', sans-serif;
 }
 
-h1{
+h1 {
 	font-family: 'Oswald', sans-serif;
 	margin-bottom: 20px;
 	color: #1A2E39;
@@ -51,7 +51,7 @@ button {
 	font-size: 16px;
 }
 
-#block2 {
+#bloc2 {
 	align-items: center;
 	margin-top: 80px;
 	color: #1A2E39;
@@ -91,13 +91,15 @@ article {
 	box-sizing: border-box;
 }
 
-article span {
-	background-color: #FDF9F0;
+p{
+	padding: 10px;
 }
+
+
 
 span {
 	padding: 1px;
-	background-color: #FDF9F0;
+	background-color: ;
 	padding: 20px;
 }
 
@@ -109,15 +111,19 @@ aside {
 	box-sizing: border-box;
 }
 
+a:hover {
+	background-color: #487F63;
+}
+
 
 footer {
-	background-color: #487F63; 
+	background-color: #487F63;
 	position: relative;
-	border: 3px solid #cccccc;
+	border: 3px solid #487F63;
 	box-sizing: border-box;
-	border: 3px solid #FDF9F0;
+	border: 3px solid #487F63;
 	height: 50px;
-	border: 2px solid #FFFFFF;
+	border: 2px solid #487F63;
 	border-radius: 12px;
 	padding: 5px;
 	text-align: center;
@@ -129,21 +135,21 @@ footer {
 	left: 0;
 }
 
-corner10 {
-	background-color: #487F63; 
-	border: 3px solid #cccccc;
+span .corner10 {
+	background-color: #487F63;
+	border: 3px solid #FDF9F0;
 	box-sizing: border-box;
 	border: 3px solid #FDF9F0;
 	height: 50px;
-	border: 2px solid #FFFFFF;
+	border: 2px solid #FDF9F0;
 	border-radius: 12px;
 	padding: 5px;
 	text-align: center;
 	background-color: #aad5a1;
 	justify-content: space-around;
-	z-index : 1;
+	z-index: 1;
 
-	
+
 }
 
 section {
@@ -157,7 +163,7 @@ section {
 span {
 	padding: 1px;
 	background-color: #FDF9F0;
-	padding: 20px;
+
 }
 
 header span {
@@ -211,6 +217,7 @@ section span {
 #evenements {
 	text-align: center;
 	list-style-type: none;
+	display: space-around;
 }
 
 
