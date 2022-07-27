@@ -99,7 +99,6 @@ p{
 
 span {
 	padding: 1px;
-	background-color: ;
 	padding: 20px;
 }
 
@@ -196,7 +195,6 @@ section span {
 	height: "200";
 	max-width: 1000px;
 	max-height: 90vh;
-	box-sizing: ;
 	padding-right: 15px;
 	padding-left: 15px;
 	box-sizing: border-box;
