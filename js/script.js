@@ -55,13 +55,15 @@ the10.then((data) => {
 	let seismesDates = []
 
 	for (i = 0; i < 10; i++) {
-		seismesDates[i] = new Date(data[i].properties.time)
+		seismesDates[i] = new Date(data[i].properties.time).toLocaleTimeString() + " " + new Date(data[i].properties.time).toLocaleDateString()
+		// log(typeof(seismesDates[i]))
 		seismesCoordinates[i] = L.marker([data[i].geometry.coordinates[1], data[i].geometry.coordinates[0]]).addTo(map)
 		seismesCoordinates[i].bindPopup(data[i].properties.place + "<br />Magnitude : " + data[i].properties.mag + "<br />Felt by " + data[i].properties.felt + " people<br />" + seismesDates[i]).openPopup()
 	}
 
 	for (i = 0; i < 5; i++) {
 		document.getElementById("séisme" + i).innerHTML = data[i].properties.place + " | " + seismesDates[i] + " | Magnitude : " + data[i].properties.mag
+		document.getElementById("séisme" + i).innerHTML.split("(")[0]
 	}
 
 })
