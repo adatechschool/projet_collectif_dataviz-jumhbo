@@ -1,8 +1,4 @@
 // Welcome Team
-// d3.select('.class'); //css
-// d3.select('div'); //html
-// console.log(d3);
-// d3.select("div").selecteAll("p").data([1, 2, 3]).enter();
 
 // const dataUrl =
 // 	"https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson";
@@ -50,45 +46,61 @@ the10.then((data) => {
 	// log(data[0].properties.felt);
 	// log(data[0].properties.place);
 
-
-	let seismesCoordinates = []
-	let seismesDates = []
+	let seismesCoordinates = [];
+	let seismesDates = [];
 
 	for (i = 0; i < 10; i++) {
-		seismesDates[i] = new Date(data[i].properties.time).toLocaleTimeString() + " " + new Date(data[i].properties.time).toLocaleDateString()
+		seismesDates[i] = new Date(data[i].properties.time);
 		// log(typeof(seismesDates[i]))
-		seismesCoordinates[i] = L.marker([data[i].geometry.coordinates[1], data[i].geometry.coordinates[0]]).addTo(map)
-		seismesCoordinates[i].bindPopup(data[i].properties.place + "<br />Magnitude : " + data[i].properties.mag + "<br />Felt by " + data[i].properties.felt + " people<br />" + seismesDates[i]).openPopup()
+		seismesCoordinates[i] = L.marker([
+			data[i].geometry.coordinates[1],
+			data[i].geometry.coordinates[0],
+		]).addTo(map);
+		seismesCoordinates[i]
+			.bindPopup(
+				data[i].properties.place +
+					"<br />Magnitude : " +
+					data[i].properties.mag +
+					"<br />Felt by " +
+					data[i].properties.felt +
+					" people<br />" +
+					seismesDates[i]
+			)
+			.openPopup();
 	}
 
 	for (i = 0; i < 5; i++) {
-		document.getElementById("séisme" + i).innerHTML = data[i].properties.place + " | " + seismesDates[i] + " | Magnitude : " + data[i].properties.mag
-		document.getElementById("séisme" + i).innerHTML.split("(")[0]
+		document.getElementById("séisme" + i).innerHTML =
+			data[i].properties.place +
+			" | " +
+			seismesDates[i] +
+			" | Magnitude : " +
+			data[i].properties.mag;
+		document.getElementById("séisme" + i).innerHTML.split("(")[0];
 	}
+});
 
-})
+// const usrLocation = async () => {
+// 	return new Promise((resolve, reject) => {
+// 		navigator.geolocation.getCurrentPosition(
+// 			(position) => {
+// 				resolve({
+// 					lat: position.coords.latitude,
+// 					long: position.coords.longitude,
+// 				});
+// 			},
+// 			() => {
+// 				//status.textContent = "We can't get you're location";
+// 				resolve(null);
+// 			}
+// 		);
+// 	});
+// };
 
-const usrLocation = async () => {
-	return new Promise((resolve, reject) => {
-		navigator.geolocation.getCurrentPosition(
-			(position) => {
-				resolve({
-					lat: position.coords.latitude,
-					long: position.coords.longitude,
-				});
-			},
-			() => {
-				//status.textContent = "We can't get you're location";
-				resolve(null);
-			}
-		);
-	});
-};
+// const btnClick = async (pos) => {
+// 	const position = await usrLocation();
+// 	console.log(position);
+// 	return pos;
+// };
 
-const btnClick = async (pos) => {
-	const position = await usrLocation();
-	console.log(position);
-	return pos;
-};
-
-document.querySelector(".usr-Location").addEventListener("click", btnClick);
+// document.querySelector(".usr-Location").addEventListener("click", btnClick);
